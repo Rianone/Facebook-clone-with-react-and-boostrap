@@ -1,0 +1,168 @@
+:root{
+    --primary: #1876f2 ;
+    --success: #42b72a;
+    --secondary: #e4e6eb;
+}
+
+.Profile .active{
+    color: var(--primary) !important;
+    border-bottom: 4px solid var(--primary);
+}
+.Profile .active-menu i{
+    color: var(--primary) !important;
+}
+.Profile .search{
+    border: none !important;
+}                       
+.Profile .search-icon{
+    border-radius: 20%;
+}
+.Profile .profile-image{
+    height: 40px;
+    width: 40px;
+ }
+ .Profile .left-image, .Profile-bsbody .left-image{
+    height: 40px;
+    width: 40px;
+ }
+ .Profile .right-image{
+    height: 40px;
+    width: 40px; 
+ } 
+ .Messenger-bsbody .right-image{
+    height: 50px;
+    width: 50px; 
+ }
+ .Profile .online{
+    height: 50%;
+    margin-top: auto;
+    border-radius: 50%;
+    background-color: #42b72a;
+ }
+ .Messenger-bsbody .online{
+    height: 50%;
+    margin-top: auto;
+    border-radius: 50%;
+    background-color: #42b72a;
+ }
+ .Messenger-bsbody .not-read{
+    height: 50%;
+    margin-top: auto;
+    border-radius: 50%;
+ }
+.Profile .main-container{
+    height: 89vh;
+    background-color: var(--secondary) !important;
+}
+.Profile .left-box-element{
+    color: #222;
+    transition: all 0.3s ease-in-out;
+}
+.Messenger-bsbody .left-box-element{
+    color: #222;
+    transition: all 0.3s ease-in-out;
+}
+.Messenger-bsbody .left-box-element .img-container i{
+    transition: all 0.3s ease-in-out;
+    position:relative;
+    right: 1.5rem;
+    top: 1rem;
+}
+.Profile .left-box-filter-element{
+    color: #222;
+    transition: all 0.3s ease-in-out;
+}
+.Profile .left-box-element:hover{
+    background-color: #d3d5da !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Messenger-bsbody .left-box-element:hover{
+    background-color: #d3d5da !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Profile-bsbody .left-box-element:hover{
+    background-color: #d3d5da !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.left-box-filter-element:hover{
+    background-color: #e0e2e7 !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Profile .left-container{
+    overflow: auto;
+    height: 89vh !important;
+}
+.Profile .left-container-content{
+    overflow: auto;
+}
+.Profile .color-black{
+    color: black !important;
+}
+.Profile .middle-nav .nav-item{
+    cursor: pointer;
+    transition: 0.3s background-color ease-in-out;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.Profile .middle-nav .nav-item:hover{
+    background-color: #e4e6eb;
+}
+.Menu-bsbody{
+    background-color: #fff;
+    width: 40rem;
+    height:80vh;
+    /* overflow: auto; */
+}
+.Messenger-bsbody{
+    background-color: #fff;
+    height:70vh;
+    /* overflow: auto; */
+}
+.Profile-bsbody{
+    height: 68vh;
+    width: 15rem;
+}
+.bs-body-row{
+    position: absolute;
+    left: 29rem;
+}
+.Menu-bsheader{
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+.Messenger-bsheader{
+    font-size: 1.6rem;
+    margin: 1.6rem;
+}
+.left-menu-component:hover{
+    background-color: #d3d5da !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Messenger-bsbody .badge{
+    font-size: 1rem;
+}
+.Messenger-bsbody .badge:hover{
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+}
+.Profile .actual-page-container{
+    margin-left: 1rem !important;
+    margin-right: -5rem;
+    height: 87vh;
+    overflow: auto;
+}
+.Profile .actual-page-container::-webkit-scrollbar {
+    display: none;
+  }
+.Profile .middle-nav{
+    margin-right: 5rem !important;
+}

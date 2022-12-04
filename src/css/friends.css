@@ -1,0 +1,12 @@
+.Friends .friends-menu{
+    height: 90vh !important;
+}
+.Friends .friends-container{
+    height: 90vh !important;
+    background-color: #e4e6eb !important;
+}
+.Friends .card-img-miniature{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}

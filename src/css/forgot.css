@@ -1,0 +1,23 @@
+.Forgot .navbar+.container-fluid{
+    background-color: #e9ebee !important;
+    height: 60vh;
+}
+.Forgot .divider{
+    height: 15vh;
+}
+.bgprimary{
+    background-color: #e9ebee !important;
+}
+.Reset .navbar+.container-fluid{
+    height: 80vh;
+}
+.Reset .divider{
+    height: 8vh;
+}
+.Reset .profile-image{
+   height: 70px;
+   width: 60px;
+}
+.NoLongerAccess .navbar+.container-fluid{
+    background-color: #e9ebee !important;
+}

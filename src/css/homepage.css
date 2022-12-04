@@ -1,0 +1,55 @@
+.Homepage .navbar{
+    display: flex;
+    width: 100%;        
+    align-items: center;
+    justify-content: center;
+}
+.Homepage .navbar-nav{
+    width: 90%;
+    border-bottom: 1px #e4e6eb solid;
+}
+.Homepage .navbar-nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+}
+.Homepage .navbar-nav a:hover{
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d3d5da67 !important;
+}
+.Homepage .story-circle-add{
+    position: relative;
+    bottom: 2rem;
+    padding: 1.2rem 0.4rem 0.9rem 0.4rem;
+    font-size: 1.2rem;
+    background: #fff;
+    border-radius: 50%;
+}
+.Homepage .card-story-text{
+    position: relative;
+    bottom: 1.5rem;
+}
+.Homepage .card{
+    border-radius: 3rem;
+}
+.Homepage .card-image-con{
+    position: absolute;
+    z-index: 32;
+    background-color: #1876f2;
+    padding: 0.3rem;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+.Homepage .card-img-top:hover{
+   cursor: pointer;
+   opacity: 0.8;
+}
+.Homepage .Reels{
+    height: 37vh;
+}
+.Homepage .earth-icon{
+    font-size: 1rem !important;
+}

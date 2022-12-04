@@ -1,0 +1,38 @@
+.Login{
+    background-color: #f0f2f5fe;
+}
+.Login .login-container{
+    height: 100vh;
+}
+.Login .login-container .text{
+    font-size: 2rem !important;
+}
+.Login .login-container .create{
+    color: black;
+    font-weight: bold;
+}
+.Login input[type = text], .Login input[type = password], .Login .form-select{
+    font-size: 1rem !important;
+    background-color: #f5f6f7 !important;
+}
+.Login .login-container input[type = text], .Login .login-container input[type = password]{
+    padding: 1rem 1rem;
+}
+.Login .login-container .btn-success{
+    width: 55%;
+}
+.Login .login-container+footer,.Login .login-container+footer .container{
+    background-color: rgb(255, 255, 255);
+}
+.Login .login-container+footer .col-12, .Login .login-container+footer  .link, .Login .login-container+footer  .row,.Login .login-container+footer  small{
+    background-color: #fff;
+}
+.Login .login-container+footer+.modal{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.Login .login-container+footer+.modal .form-check .col {
+    background-color: #f5f6f7  !important;
+}
+.Login .login-container+footer+.modal .policy{
+    font-size: 0.7rem;
+}
