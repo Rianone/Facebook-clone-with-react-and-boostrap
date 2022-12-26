@@ -9,7 +9,7 @@ import Main from "./Main";
 
 function ProfilePage() {
 
-    const [actualPage, setActualPage] = useState("Marketplace");
+    const [actualPage, setActualPage] = useState("Home");
 
 
     function actual(page){

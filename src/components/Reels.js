@@ -35,6 +35,7 @@ function Reels() {
                 </div>
                 </div>
                 </div>   
+                
                  <div className="col-3">
                 <div class="card rounded-5 bgprimary">
                  <div className="img-card-con">

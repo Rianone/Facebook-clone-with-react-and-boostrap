@@ -1,7 +1,7 @@
-.Friends .friends-menu{
+.Friends .friends-menu,.Marketplace .marketplace-menu, .Groups .groups-menu{
     height: 90vh !important;
 }
-.Friends .friends-container{
+.friends-container, .groups-container{
     height: 90vh !important;
     background-color: #e4e6eb !important;
 }
@@ -10,3 +10,15 @@
     width: 20px;
     border-radius: 50%;
 }
+.Groups .groups-container{
+    margin-left: 1rem !important;
+    margin-right: -5rem;
+    height: 87vh;
+    overflow: auto;
+}
+/* .Groups .groups{
+    overflow: auto;
+} */
+.Groups .groups-container::-webkit-scrollbar{
+    display: none;
+  }
