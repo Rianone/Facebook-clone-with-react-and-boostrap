@@ -24,7 +24,7 @@ function App() {
 
         {/* Profile routes */}
         <Route path="/profile" element={<ProfilePage></ProfilePage>} />
-        <Route path="/" element={<ProfilePage></ProfilePage>} />
+        <Route path="/" element={<LoginPage/>} />
 
 
       </Routes>
