@@ -23,9 +23,7 @@ function ForgotPassword() {
                 </div>
                 <div className="card-footer w-100 d-flex justify-content-end bg-white">
                      <a type="button" class="btn btn-secondary m-2" data-dismiss="modal" href="/login">Cancel</a>
-                     {/* {email==""? 
-                         <button type="button" class="btn btn-primary m-2">Search</button>
-                     : */}
+                     
                         <a href="/reset-password" class="btn btn-primary m-2">Search</a>
                      
                 </div>
