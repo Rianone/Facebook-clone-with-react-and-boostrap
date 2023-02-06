@@ -21,3 +21,19 @@
 .NoLongerAccess .navbar+.container-fluid{
     background-color: #e9ebee !important;
 }
+
+@media(max-width: 600px) {
+.Reset .container-fluid .find {
+    margin-top: 7rem;
+}
+}
+@media(max-width: 450px) {
+    .Reset .container-fluid .find {
+        margin-top: 12rem;
+    }
+}
+@media(max-width: 375px) {
+    .Reset .container-fluid .find {
+        margin-top: 20rem;
+    }
+}

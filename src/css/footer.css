@@ -1,0 +1,15 @@
+@media(max-width: 1000px) {
+    footer .container-fluid{
+        font-size: 0.7rem !important;
+    }
+}
+@media(max-width: 650px) {
+    footer .container-fluid {
+        font-size: 0.5rem !important;
+    }
+}
+@media(max-width: 500px) {
+    footer .container-fluid {
+        font-size: 0.3rem !important;
+    }
+}

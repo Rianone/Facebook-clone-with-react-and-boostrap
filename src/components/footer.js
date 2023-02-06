@@ -1,7 +1,9 @@
+import "../css/footer.css"
+
 function Footer() {
     return ( 
         <footer>
-        <div className="container pt-2">
+        <div className="container-fluid pt-2">
          <div className="row">
              <div className="col-12 mb-3">
                <small className="d-flex justify-content-around">

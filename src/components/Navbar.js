@@ -103,273 +103,487 @@ function NavbarGlobal(props) {
         // })
     
         postList = posts.map((post)=>{
-            return <Posts text={post.title} info={post.body.slice(0,60)} index={post.id}></Posts>
+            return <Posts text={post.title} info={post.body.slice(0,60)} index={post.id} key={post.id}></Posts>
         })
 
-    return ( 
-        <nav class="navbar navbar-expand-md shadow ">
-              <div class="container-fluid justify-contrnt-between">
-                <div className="d-flex">
-                <a class="navbar-brand" href="#"><img src="./images/facebook_logo2.png" alt="facebook-logo" /></a>
-                <form class="d-flex my-2 my-lg-0">
-                    <div class="input-group">
-                        <span class="input-group-text search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                        <input type="search" class="form-control bgsecondary search" placeholder="Research on facebook"/>
-                    </div>
-                </form>
-                </div>
+    return (
+      <nav className="navbar navbar-expand-md shadow ">
+        <div className="container-fluid justify-contrnt-between">
+          <div className="d-flex">
+            <a className="navbar-brand" href="#">
+              <img src="./images/facebook_logo2.png" alt="facebook-logo" />
+            </a>
+            <form className="d-flex my-2 my-lg-0">
+              <div className="input-group">
+                <span className="input-group-text search search-icon">
+                  <i className="fa fa-search" aria-hidden="true"></i>
+                </span>
+                <input
+                  type="search"
+                  className="form-control bgsecondary search"
+                  placeholder="Research on facebook"
+                />
+              </div>
+            </form>
+          </div>
 
-                <div class="middle-nav">
-                    <ul class="navbar-nav me-5 mt-2 mt-lg-0">
-                    <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 150, hide: 150 }}
-                        overlay={<Tooltip id="button-tooltip">Home</Tooltip>}
-                    >
-                        <li class="nav-item">
-                            <a class={activePage=="Home"?"nav-link pe-5 ps-5 active": "nav-link pe-5 ps-5"} onClick={()=>{
-                                props.setActualPage("Home")
-                                setActivePage("Home")
-                            }}><i className="bx bxs-home bx-sm"></i></a>
-                        </li> 
-                    </OverlayTrigger>
+          <div className="middle-nav">
+            <ul className="navbar-nav me-5 mt-2 mt-lg-0">
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 150, hide: 150 }}
+                overlay={<Tooltip id="button-tooltip">Home</Tooltip>}
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activePage == "Home"
+                        ? "nav-link pe-5 ps-5 active"
+                        : "nav-link pe-5 ps-5"
+                    }
+                    onClick={() => {
+                      props.setActualPage("Home");
+                      setActivePage("Home");
+                    }}
+                  >
+                    <i className="bx bxs-home bx-sm"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
 
-                    <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 150, hide: 150 }}
-                        overlay={<Tooltip id="button-tooltip">Friends</Tooltip>}
-                    >
-                        <li class="nav-item">
-                            <a class={activePage=="Friends"?"nav-link pe-5 ps-5 active": "nav-link pe-5 ps-5"}  onClick={()=>{
-                                setActivePage("Friends")
-                                props.setActualPage("Friends")
-                            }}><i className="bx bx-group bx-sm"></i></a>
-                        </li> 
-                    </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 150, hide: 150 }}
+                overlay={<Tooltip id="button-tooltip">Friends</Tooltip>}
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activePage == "Friends"
+                        ? "nav-link pe-5 ps-5 active"
+                        : "nav-link pe-5 ps-5"
+                    }
+                    onClick={() => {
+                      setActivePage("Friends");
+                      props.setActualPage("Friends");
+                    }}
+                  >
+                    <i className="bx bx-group bx-sm"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
 
-                    <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 150, hide: 150 }}
-                        overlay={<Tooltip id="button-tooltip">Watch</Tooltip>}
-                    >
-                        <li class="nav-item">
-                            <a class={activePage=="Watch"?"nav-link pe-5 ps-5 active": "nav-link pe-5 ps-5"} onClick={()=>{
-                                props.setActualPage("Watch")
-                                setActivePage("Watch")
-                            }}><i className="bx bx-slideshow bx-sm"></i></a>
-                        </li>
-                    </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 150, hide: 150 }}
+                overlay={<Tooltip id="button-tooltip">Watch</Tooltip>}
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activePage == "Watch"
+                        ? "nav-link pe-5 ps-5 active"
+                        : "nav-link pe-5 ps-5"
+                    }
+                    onClick={() => {
+                      props.setActualPage("Watch");
+                      setActivePage("Watch");
+                    }}
+                  >
+                    <i className="bx bx-slideshow bx-sm"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
 
-                    <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 150, hide: 150 }}
-                        overlay={<Tooltip id="button-tooltip">Marketplace</Tooltip>}
-                    >
-                        <li class="nav-item">
-                            <a class={activePage=="Marketplace"?"nav-link pe-5 ps-5 active": "nav-link pe-5 ps-5"} onClick={()=>{
-                                props.setActualPage("Marketplace")
-                                setActivePage("Marketplace")
-                            }}><i className="bx bx-store bx-sm"></i></a>
-                        </li>
-                    </OverlayTrigger>
-                    
-                    <OverlayTrigger
-                        placement="bottom"
-                        delay={{ show: 150, hide: 150 }}
-                        overlay={<Tooltip id="button-tooltip">Groups</Tooltip>}
-                    >
-                        <li class="nav-item"> 
-                            <a class={activePage=="Groups"?"nav-link pe-5 ps-5 active": "nav-link pe-5 ps-5"} onClick={()=>{
-                                props.setActualPage("Groups")
-                                setActivePage("Groups")
-                            }}><i className="bx bxs-group bx-sm"></i></a>
-                        </li>
-                    </OverlayTrigger> 
-                    </ul>
-                </div>
-                
-                <div class="" >
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                      <OverlayTrigger trigger="click" placement="bottom" show={activeMenu=="Menu"} overlay={
-                            <Popover id="popover-basic" bsPrefix="Menu-bsbody shadow">
-                            <Popover.Header as="h1" bsPrefix="Menu-bsheader">Menu</Popover.Header>
-                                <Scrollbar>
-                            <Popover.Body >
-                              <div className="row d-flex">
-                                <div className="col-8 border p-3 ms-4">
-                                    <div class="input-group">
-                                         <span class="input-group-text search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                                         <input type="text " class="form-control bgsecondary search" placeholder="Research on facebook" onChange={(e)=>{
-                                            setFilterMenu(e.target.value)
-                                            if(filterMenu.trim().length>0){
-                                                var filtered = filterList.filter((component)=>{
-                                                return component.name.trim().toLowerCase().includes(filterMenu.trim().toLowerCase())})
-                                                setFilteredList(filtered)
-                                            }
-                                            else{
-                                                setFilteredList(filterList)
-                                            }
-                                         }} />
-                                         
-                                         <div className="container mt-2">
-                                         {filteredList.map((compo)=>{
-                                             return <LeftFilterComponent text={compo.name} image={compo.image} desc={compo.desc}></LeftFilterComponent>
-                                         })}
-                                         </div>
-                                    </div>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 150, hide: 150 }}
+                overlay={<Tooltip id="button-tooltip">Marketplace</Tooltip>}
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activePage == "Marketplace"
+                        ? "nav-link pe-5 ps-5 active"
+                        : "nav-link pe-5 ps-5"
+                    }
+                    onClick={() => {
+                      props.setActualPage("Marketplace");
+                      setActivePage("Marketplace");
+                    }}
+                  >
+                    <i className="bx bx-store bx-sm"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
 
-                                </div>
-                                <div className="col-4 border bs-body-row">
-                                    <h1 className="Menu-bsheader">Create</h1>
-                                    <div className="col">
-                                        <LeftMenuComponent icon="bx bxs-edit bx-sm me-2 text-secondary bx-border-circle" text="Post"></LeftMenuComponent>
-                                        <LeftMenuComponent icon="bx bxs-book-open bx-sm me-2 text-secondary bx-border-circle" text="Story"></LeftMenuComponent>
-                                        <LeftMenuComponent icon="bx bxs-video-plus bx-sm me-2 text-secondary bx-border-circle" text="Room"></LeftMenuComponent>
-                                        <hr />
-                                        <LeftMenuComponent icon="bx bxs-flag bx-sm me-2 text-secondary bx-border-circle" text="Page"></LeftMenuComponent>
-                                        <LeftMenuComponent icon="bx bxs-megaphone bx-sm me-2 text-secondary bx-border-circle" text="Ad"></LeftMenuComponent>
-                                        <LeftMenuComponent icon="bx bxs-group bx-sm me-2 text-secondary bx-border-circle" text="Group"></LeftMenuComponent>
-                                        <LeftMenuComponent icon="bx bxs-book-add bx-sm me-2 text-secondary bx-border-circle" text="Event"></LeftMenuComponent>
-                                        <LeftMenuComponent icon="bx bxs-shopping-bag bx-sm me-2 text-secondary bx-border-circle" text="Market Listing"></LeftMenuComponent>
-                                    </div>
-                                </div>
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 150, hide: 150 }}
+                overlay={<Tooltip id="button-tooltip">Groups</Tooltip>}
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activePage == "Groups"
+                        ? "nav-link pe-5 ps-5 active"
+                        : "nav-link pe-5 ps-5"
+                    }
+                    onClick={() => {
+                      props.setActualPage("Groups");
+                      setActivePage("Groups");
+                    }}
+                  >
+                    <i className="bx bxs-group bx-sm"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
+            </ul>
+          </div>
+
+          <div className="">
+            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+              <OverlayTrigger
+                trigger="click"
+                placement="bottom"
+                show={activeMenu == "Menu"}
+                overlay={
+                  <Popover id="popover-basic" bsPrefix="Menu-bsbody shadow">
+                    <Popover.Header as="h1" bsPrefix="Menu-bsheader">
+                      Menu
+                    </Popover.Header>
+                    <Scrollbar>
+                      <Popover.Body>
+                        <div className="row d-flex">
+                          <div className="col-8 border p-3 ms-4">
+                            <div className="input-group">
+                              <span className="input-group-text search search-icon">
+                                <i
+                                  className="fa fa-search"
+                                  aria-hidden="true"
+                                ></i>
+                              </span>
+                              <input
+                                type="text "
+                                className="form-control bgsecondary search"
+                                placeholder="Research on facebook"
+                                onChange={(e) => {
+                                  setFilterMenu(e.target.value);
+                                  if (filterMenu.trim().length > 0) {
+                                    var filtered = filterList.filter(
+                                      (component) => {
+                                        return component.name
+                                          .trim()
+                                          .toLowerCase()
+                                          .includes(
+                                            filterMenu.trim().toLowerCase()
+                                          );
+                                      }
+                                    );
+                                    setFilteredList(filtered);
+                                  } else {
+                                    setFilteredList(filterList);
+                                  }
+                                }}
+                              />
+
+                              <div className="container mt-2">
+                                {filteredList.map((compo) => {
+                                  return (
+                                    <LeftFilterComponent
+                                      text={compo.name}
+                                      image={compo.image}
+                                      desc={compo.desc}
+                                      key={compo.name}
+                                    ></LeftFilterComponent>
+                                  );
+                                })}
                               </div>
-                            </Popover.Body>
-                              </Scrollbar>
-                          </Popover>
-                      }>
-                        <li class="nav-item">
-                            <a class={activeMenu=="Menu"?"nav-link active-menu": "nav-link"} onClick={()=>{
-                                if(activeMenu == "Menu")
-                                setActiveMenu("")
-                                else
-                                setActiveMenu("Menu")
-                            }}><i className="bgprimary bx bxs-grid bx-sm bx-border-circle color-black"></i></a>
-                        </li> 
-                     </OverlayTrigger>
-                    
-                     <OverlayTrigger trigger="click" placement="bottom" show={activeMenu=="Messenger"} overlay={
-                            <Popover id="popover-basic">
-                            <Popover.Header as="h1" bsPrefix="Messenger-bsheader"><div className="row">
-                                <div className="col-5">Chats</div>
-                                <div className="col-7">
-                                    <a href="#" className="text-secondary m-2"><i className="bx bx-dots-horizontal-rounded bx-sm"></i></a>
-                                    <a href="#" className="text-secondary m-2"><i className="bx bx-expand bx-sm"></i></a>
-                                    <a href="#" className="text-secondary m-2"><i className="bx bx-video-plus bx-sm"></i></a>
-                                    <a href="#" className="text-secondary m-2"><i className="bx bx-edit bx-sm"></i></a>
-                                </div>
-                            </div>  
-                            </Popover.Header>
-                            <Popover.Body bsPrefix="Messenger-bsbody">
-                            <Scrollbar>
-                                <div className="input-group p-2">
-                                <span class="input-group-text search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                                         <input type="search" class="form-control bgsecondary search" placeholder="Research on facebook" onInput={(e)=>{
-                                             setFilterContact(e.target.value)
-                                             if(e.target.value != ""){
-                                                 var filteredContact = filteredContactList.filter((component)=>{
-                                                    return component.first_name.trim().toLowerCase().includes(filterContact.trim().toLowerCase()) || component.last_name.trim().toLowerCase().includes(filterContact.trim().toLowerCase())
-                                                 })
-                                                 setFilteredContactList(filteredContact)
-                                             }
-                                             else{
-                                                     setFilteredContactList(contacts)
-                                             }
-                                         }} />
-                                </div>
-                               {
-                                     filteredContactList.map((contact)=>{
-                                            return <Contact image={contact.avatar} key={contact.id} text={contact.first_name +" "+ contact.last_name}></Contact>
-                                    })
-                               }
-                            </Scrollbar>
-                            </Popover.Body>
-                          </Popover>
-                      }>
-                        <li class="nav-item"> 
-                            <a class={activeMenu=="Messenger"?"nav-link active-menu": "nav-link"} onClick={()=>{
-                                if(activeMenu == "Messenger")
-                                setActiveMenu("")
-                                else
-                                setActiveMenu("Messenger")
-                            }}><i className=" bgprimary bx bxl-messenger bx-sm bx-border-circle color-black"></i></a>
-                        </li> 
-                    </OverlayTrigger>
-
-                    <OverlayTrigger trigger="click" placement="bottom" show={activeMenu=="Notifications"}  overlay={
-                            <Popover id="popover-basic">
-                           <Popover.Header as="h1" bsPrefix="Messenger-bsheader"><div className="row">
-                                <div className="col-9">Notifications</div>
-                                <div className="col-3">
-                                    <a href="#" className="text-secondary m-2"><i className="bx bx-dots-horizontal-rounded bx-sm"></i></a>
-                                </div>
-                            </div>  
-                            </Popover.Header>
-                            <Popover.Body bsPrefix="Messenger-bsbody">
-                            <Scrollbar>
-                                <div className="">
-                                    <a className="badge bg-primary p-2 m-2">All</a>
-                                    <a className="badge bg-secondary p-2 m-2">Unread</a>
-                                </div>
-                                {postList}
-                            </Scrollbar>
-                            </Popover.Body>
-                          </Popover>
-                      }>
-                        <li class="nav-item">
-                            <a class={activeMenu=="Notifications"?"nav-link active-menu": "nav-link"} onClick={()=>{
-                                if(activeMenu == "Notifications")
-                                setActiveMenu("")
-                                else
-                                setActiveMenu("Notifications")
-                            }}><i className=" bgprimary color-black bx bxs-bell bx-sm bx-border-circle color-black"></i></a>
-                        </li>
-                    </OverlayTrigger>
-
-                    <OverlayTrigger trigger="click" placement="bottom" show={activeMenu=="Profile"} overlay={
-                            <Popover id="popover-basic">
-                            <Popover.Body bsPrefix="Profile-bsbody">
-                              <div className="card shadow m-2 p-1">
-                                 <LeftComponent image="./images/profile_img.jpg" text="Username"></LeftComponent>
-                                 <hr />
-                                 <a href="#" className="btn btn-link">See all profiles</a>
-                              </div>
-                              <div className="card shadow p-1 m-2">
-                                <ProfileMenuComponent text="Settings & privacy" icon="cog"></ProfileMenuComponent>
-                                <ProfileMenuComponent text="Help & support" icon="help-circle"></ProfileMenuComponent>
-                                <ProfileMenuComponent text="Display & Accessibility" icon="moon"></ProfileMenuComponent>
-                                <ProfileMenuComponent text="Give feedback" icon="message-alt-error"></ProfileMenuComponent>
-                                <ProfileMenuComponent text="Log out" icon="door-open"></ProfileMenuComponent>
-                              </div>
-
-                             <div className="bottom m-2 mt-3">
-                                <small> 
-                                    <a href="#" className="link text-secondary">Privacy .</a>
-                                    <a href="#" className="link text-secondary">Terms .</a>
-                                    <a href="#" className="link text-secondary">Advertising .</a>
-                                    <a href="#" className="link text-secondary">Ad choices .</a>
-                                    <a href="#" className="link text-secondary">Cookies</a>
-                                </small>
                             </div>
-                            </Popover.Body>
-                          </Popover>
-                      }>
-                        <li class="nav-item">
-                            <a class="nav-link" onClick={()=>{
-                                if(activeMenu == "Profile")
-                                setActiveMenu("")
-                                else
-                                setActiveMenu("Profile")
-                            }}><img src="./images/profile_img.jpg" alt="Profile image" className="rounded-circle profile-image"/></a>
-                        </li>
-                    </OverlayTrigger>
+                          </div>
+                          <div className="col-4 border bs-body-row">
+                            <h1 className="Menu-bsheader">Create</h1>
+                            <div className="col">
+                              <LeftMenuComponent
+                                icon="bx bxs-edit bx-sm me-2 text-secondary bx-border-circle"
+                                text="Post"
+                              ></LeftMenuComponent>
+                              <LeftMenuComponent
+                                icon="bx bxs-book-open bx-sm me-2 text-secondary bx-border-circle"
+                                text="Story"
+                              ></LeftMenuComponent>
+                              <LeftMenuComponent
+                                icon="bx bxs-video-plus bx-sm me-2 text-secondary bx-border-circle"
+                                text="Room"
+                              ></LeftMenuComponent>
+                              <hr />
+                              <LeftMenuComponent
+                                icon="bx bxs-flag bx-sm me-2 text-secondary bx-border-circle"
+                                text="Page"
+                              ></LeftMenuComponent>
+                              <LeftMenuComponent
+                                icon="bx bxs-megaphone bx-sm me-2 text-secondary bx-border-circle"
+                                text="Ad"
+                              ></LeftMenuComponent>
+                              <LeftMenuComponent
+                                icon="bx bxs-group bx-sm me-2 text-secondary bx-border-circle"
+                                text="Group"
+                              ></LeftMenuComponent>
+                              <LeftMenuComponent
+                                icon="bx bxs-book-add bx-sm me-2 text-secondary bx-border-circle"
+                                text="Event"
+                              ></LeftMenuComponent>
+                              <LeftMenuComponent
+                                icon="bx bxs-shopping-bag bx-sm me-2 text-secondary bx-border-circle"
+                                text="Market Listing"
+                              ></LeftMenuComponent>
+                            </div>
+                          </div>
+                        </div>
+                      </Popover.Body>
+                    </Scrollbar>
+                  </Popover>
+                }
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activeMenu == "Menu" ? "nav-link active-menu" : "nav-link"
+                    }
+                    onClick={() => {
+                      if (activeMenu == "Menu") setActiveMenu("");
+                      else setActiveMenu("Menu");
+                    }}
+                  >
+                    <i className="bgprimary bx bxs-grid bx-sm bx-border-circle color-black"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
 
-                    </ul>
-                </div>
-                
-             </div>
-           </nav>
-     );
+              <OverlayTrigger
+                trigger="click"
+                placement="bottom"
+                show={activeMenu == "Messenger"}
+                overlay={
+                  <Popover id="popover-basic">
+                    <Popover.Header as="h1" bsPrefix="Messenger-bsheader">
+                      <div className="row">
+                        <div className="col-5">Chats</div>
+                        <div className="col-7">
+                          <a href="#" className="text-secondary m-2">
+                            <i className="bx bx-dots-horizontal-rounded bx-sm"></i>
+                          </a>
+                          <a href="#" className="text-secondary m-2">
+                            <i className="bx bx-expand bx-sm"></i>
+                          </a>
+                          <a href="#" className="text-secondary m-2">
+                            <i className="bx bx-video-plus bx-sm"></i>
+                          </a>
+                          <a href="#" className="text-secondary m-2">
+                            <i className="bx bx-edit bx-sm"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </Popover.Header>
+                    <Popover.Body bsPrefix="Messenger-bsbody">
+                      <Scrollbar>
+                        <div className="input-group p-2">
+                          <span className="input-group-text search search-icon">
+                            <i className="fa fa-search" aria-hidden="true"></i>
+                          </span>
+                          <input
+                            type="search"
+                            className="form-control bgsecondary search"
+                            placeholder="Research on facebook"
+                            onInput={(e) => {
+                              setFilterContact(e.target.value);
+                              if (e.target.value != "") {
+                                var filteredContact =
+                                  filteredContactList.filter((component) => {
+                                    return (
+                                      component.first_name
+                                        .trim()
+                                        .toLowerCase()
+                                        .includes(
+                                          filterContact.trim().toLowerCase()
+                                        ) ||
+                                      component.last_name
+                                        .trim()
+                                        .toLowerCase()
+                                        .includes(
+                                          filterContact.trim().toLowerCase()
+                                        )
+                                    );
+                                  });
+                                setFilteredContactList(filteredContact);
+                              } else {
+                                setFilteredContactList(contacts);
+                              }
+                            }}
+                          />
+                        </div>
+                        {filteredContactList.map((contact) => {
+                          return (
+                            <Contact
+                              image={contact.avatar}
+                              key={contact.id}
+                              text={
+                                contact.first_name + " " + contact.last_name
+                              }
+                            ></Contact>
+                          );
+                        })}
+                      </Scrollbar>
+                    </Popover.Body>
+                  </Popover>
+                }
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activeMenu == "Messenger"
+                        ? "nav-link active-menu"
+                        : "nav-link"
+                    }
+                    onClick={() => {
+                      if (activeMenu == "Messenger") setActiveMenu("");
+                      else setActiveMenu("Messenger");
+                    }}
+                  >
+                    <i className=" bgprimary bx bxl-messenger bx-sm bx-border-circle color-black"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
+
+              <OverlayTrigger
+                trigger="click"
+                placement="bottom"
+                show={activeMenu == "Notifications"}
+                overlay={
+                  <Popover id="popover-basic">
+                    <Popover.Header as="h1" bsPrefix="Messenger-bsheader">
+                      <div className="row">
+                        <div className="col-9">Notifications</div>
+                        <div className="col-3">
+                          <a href="#" className="text-secondary m-2">
+                            <i className="bx bx-dots-horizontal-rounded bx-sm"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </Popover.Header>
+                    <Popover.Body bsPrefix="Messenger-bsbody">
+                      <Scrollbar>
+                        <div className="">
+                          <a className="badge bg-primary p-2 m-2">All</a>
+                          <a className="badge bg-secondary p-2 m-2">Unread</a>
+                        </div>
+                        {postList}
+                      </Scrollbar>
+                    </Popover.Body>
+                  </Popover>
+                }
+              >
+                <li className="nav-item">
+                  <a
+                    className={
+                      activeMenu == "Notifications"
+                        ? "nav-link active-menu"
+                        : "nav-link"
+                    }
+                    onClick={() => {
+                      if (activeMenu == "Notifications") setActiveMenu("");
+                      else setActiveMenu("Notifications");
+                    }}
+                  >
+                    <i className=" bgprimary color-black bx bxs-bell bx-sm bx-border-circle color-black"></i>
+                  </a>
+                </li>
+              </OverlayTrigger>
+
+              <OverlayTrigger
+                trigger="click"
+                placement="bottom"
+                show={activeMenu == "Profile"}
+                overlay={
+                  <Popover id="popover-basic">
+                    <Popover.Body bsPrefix="Profile-bsbody">
+                      <div className="card shadow m-2 p-1">
+                        <LeftComponent
+                          image="./images/profile_img.jpg"
+                          text="Username"
+                        ></LeftComponent>
+                        <hr />
+                        <a href="#" className="btn btn-link">
+                          See all profiles
+                        </a>
+                      </div>
+                      <div className="card shadow p-1 m-2">
+                        <ProfileMenuComponent
+                          text="Settings & privacy"
+                          icon="cog"
+                        ></ProfileMenuComponent>
+                        <ProfileMenuComponent
+                          text="Help & support"
+                          icon="help-circle"
+                        ></ProfileMenuComponent>
+                        <ProfileMenuComponent
+                          text="Display & Accessibility"
+                          icon="moon"
+                        ></ProfileMenuComponent>
+                        <ProfileMenuComponent
+                          text="Give feedback"
+                          icon="message-alt-error"
+                        ></ProfileMenuComponent>
+                        <ProfileMenuComponent
+                          text="Log out"
+                          icon="door-open"
+                        ></ProfileMenuComponent>
+                      </div>
+
+                      <div className="bottom m-2 mt-3">
+                        <small>
+                          <a href="#" className="link text-secondary">
+                            Privacy .
+                          </a>
+                          <a href="#" className="link text-secondary">
+                            Terms .
+                          </a>
+                          <a href="#" className="link text-secondary">
+                            Advertising .
+                          </a>
+                          <a href="#" className="link text-secondary">
+                            Ad choices .
+                          </a>
+                          <a href="#" className="link text-secondary">
+                            Cookies
+                          </a>
+                        </small>
+                      </div>
+                    </Popover.Body>
+                  </Popover>
+                }
+              >
+                <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    onClick={() => {
+                      if (activeMenu == "Profile") setActiveMenu("");
+                      else setActiveMenu("Profile");
+                    }}
+                  >
+                    <img
+                      src="./images/profile_img.jpg"
+                      alt="Profile image"
+                      className="rounded-circle profile-image"
+                    />
+                  </a>
+                </li>
+              </OverlayTrigger>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
 }
 
 export default NavbarGlobal;

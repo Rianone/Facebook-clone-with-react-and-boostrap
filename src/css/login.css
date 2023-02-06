@@ -36,3 +36,9 @@
 .Login .login-container+footer+.modal .policy{
     font-size: 0.7rem;
 }
+
+@media(max-width: 520px) {
+    .Login .login-container .text {
+        font-size: 1.5rem !important;
+    }
+}
