@@ -71,7 +71,7 @@ function Groups() {
                     <img className="card-img-top" src={"https://picsum.photos/400/250?random=1-image.jpg"} alt="Title"/>
                     <div className="card-body">
                         <h5 class="card-title">Group name</h5>
-                        <button className="btn btn-block btn-primary w-100 mb-2">JOin group</button>
+                        <button className="btn btn-block btn-primary w-100 mb-2">Join group</button>
                      </div>
                 </div>
                 </div>
